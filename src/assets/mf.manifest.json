@@ -1,0 +1,12 @@
+{
+  "angular-mfe-one": {
+    "isActive": true,
+    "remoteEntry": "http://localhost:4201/remoteEntry.js",
+    "exposedModule": "./RemoteMfeModule",
+    "displayName": "RemoteMfe",
+    "routePath": "mfe",
+    "ngModuleName": "RemoteMfeModule",
+    "viaRoute": true,
+    "withInPage": false
+  }
+}
