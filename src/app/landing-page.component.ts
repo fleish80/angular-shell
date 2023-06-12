@@ -31,7 +31,7 @@ export class LandingPageComponent implements OnInit {
   remotes: CustomRemoteConfig[] = [];
 
   ngOnInit(): void {
-    const manifest = getManifest<CustomManifest>();
+    const manifest = getManifest<CustomManifest>(); // setManifest was called before in main.ts file
     console.log({manifest});
     this.remotes = Object.values(manifest).filter((v) => v.viaRoute === true);
   }

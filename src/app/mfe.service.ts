@@ -11,7 +11,7 @@ export class MfeService {
   
   init() {
     return new Promise<void>((resolve, reject) => {
-      const routes = buildRoutes();
+      const routes = buildRoutes(); //creates routes dynmacally
       this.router.resetConfig(routes);
       resolve();
     });
