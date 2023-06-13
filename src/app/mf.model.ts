@@ -1,4 +1,4 @@
-import { Manifest, RemoteConfig } from "@angular-architects/module-federation";
+import { LoadRemoteModuleOptions, Manifest, RemoteConfig } from "@angular-architects/module-federation";
 
 export type CustomRemoteConfig = RemoteConfig & {
     isActive: boolean;
@@ -12,3 +12,8 @@ export type CustomRemoteConfig = RemoteConfig & {
  };
  
 export type CustomManifest = Manifest<CustomRemoteConfig>;
+
+export type PluginOptions = LoadRemoteModuleOptions & {
+    displayName: string;
+    componentName: string;
+};

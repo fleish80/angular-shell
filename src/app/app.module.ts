@@ -5,9 +5,10 @@ import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page.component';
 import { HomeComponent } from './home.component';
 import { MfeService } from './mfe.service';
+import { LoadFragmentsComponent } from './load-fragments.component';
 
 @NgModule({
-  declarations: [AppComponent, LandingPageComponent, HomeComponent],
+  declarations: [AppComponent, LandingPageComponent, HomeComponent, LoadFragmentsComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [
     // Add APP_INITIALIZER

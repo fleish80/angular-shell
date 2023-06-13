@@ -8,5 +8,13 @@
     "ngModuleName": "RemoteMfeModule",
     "viaRoute": true,
     "withInPage": false
-  }
+  },
+  "mfe1-fragment": {
+    "isActive": true,
+    "remoteEntry": "http://localhost:4201/remoteEntry.js",
+    "exposedModule": "./MfeFragmentComponent",
+    "componentName": "MfeFragmentComponent",
+    "viaRoute": false,
+    "withInPage": true
+   }
 }
