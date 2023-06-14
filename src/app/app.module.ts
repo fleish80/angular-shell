@@ -6,10 +6,11 @@ import { LandingPageComponent } from './landing-page.component';
 import { HomeComponent } from './home.component';
 import { MfeService } from './mfe.service';
 import { LoadFragmentsComponent } from './load-fragments.component';
+import { ShareLibModule } from 'share-lib';
 
 @NgModule({
   declarations: [AppComponent, LandingPageComponent, HomeComponent, LoadFragmentsComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, ShareLibModule.forRoot()],
   providers: [
     // Add APP_INITIALIZER
     {
