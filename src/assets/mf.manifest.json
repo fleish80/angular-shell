@@ -7,7 +7,8 @@
     "routePath": "mfe",
     "ngModuleName": "RemoteMfeModule",
     "viaRoute": true,
-    "withInPage": false
+    "withInPage": false,
+    "standalone": false
   },
   "mfe1-fragment": {
     "isActive": true,
@@ -16,5 +17,16 @@
     "componentName": "MfeFragmentComponent",
     "viaRoute": false,
     "withInPage": true
-   }
+   },
+   "angular-mfe-two-standalone": {
+    "isActive": true,
+    "remoteEntry": "http://localhost:4202/remoteEntry.js",
+    "exposedModule": "./mfe-two-standalone",
+    "displayName": "Mfe Standalone",
+    "routePath": "mfe-two-standalone",
+    "ngModuleName": "AppComponent",
+    "viaRoute": true,
+    "withInPage": false,
+    "standalone": true
+  }
 }

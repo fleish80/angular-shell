@@ -12,15 +12,27 @@ export function buildRoutes(): Routes {
       return value.viaRoute === true;
     })
     .map(([key, value]) => {
-      return {
-        path: value.routePath,
-        loadChildren: () =>
-          loadRemoteModule({
-            type: 'manifest',
-            remoteName: key,
-            exposedModule: value.exposedModule,
-          }).then((m) => m[value.ngModuleName!]),
-      };
+      if (value.standalone) {
+        return {
+          path: value.routePath,
+          loadComponent: () =>
+            loadRemoteModule({
+              type: 'manifest',
+              remoteName: key,
+              exposedModule: value.exposedModule,
+            }).then((m) => m[value.ngModuleName!]),
+        };
+      } else {
+        return {
+          path: value.routePath,
+          loadChildren: () =>
+            loadRemoteModule({
+              type: 'manifest',
+              remoteName: key,
+              exposedModule: value.exposedModule,
+            }).then((m) => m[value.ngModuleName!]),
+        };
+      }
     });
   const notFound = [
     {

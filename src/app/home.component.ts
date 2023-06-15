@@ -38,6 +38,6 @@ export class HomeComponent implements OnInit {
   }
 
   sendData() {
-    this.shareLib.addName('test');
+    this.shareLib.addName('shell');
   }
 }

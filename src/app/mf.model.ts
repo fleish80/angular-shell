@@ -9,6 +9,7 @@ export type CustomRemoteConfig = RemoteConfig & {
     viaRoute?: boolean;
     withInPage?: boolean;
     componentName?: string;
+    standalone: boolean;
  };
  
 export type CustomManifest = Manifest<CustomRemoteConfig>;
